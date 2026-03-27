@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Unit Convertor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css' )}}">
+
+</head>
+
+<body>
+    <header id="head1">
+        <h1>Unit Convertor</h1>
+    </header>
+    <div class="nav-bar">
+        <a href="{{ url_for('length' ) }}">Length</a>
+        <a href="{{ url_for('weight' ) }}">Weight</a>
+        <a href="{{ url_for('temp' ) }}">Temperature</a>
+    </div>
+    <form action="/result" , method="POST">
+        <br>
+        <label>Enter the weight to convert</label>
+        <br><br>
+        <input name="value" type="text" required placeholder="Enter weight">
+        <br><br>
+        <label>Unit to convert from</label>
+        <select name="convert_from">
+            <option>mg</option>
+            <option>g</option>
+            <option>kg</option>
+            <option>ounce</option>
+            <option>pound</option>
+        </select>
+        <br><br>
+        <label>Unit to convert to</label>
+        <select name="convert_to">
+            <option>mg</option>
+            <option>g</option>
+            <option>kg</option>
+            <option>ounce</option>
+            <option>pound</option>
+        </select>
+        <br><br>
+
+        <button>Convert</button>
+
+    </form>
+</body>
+
+</html>
